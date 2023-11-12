@@ -71,3 +71,5 @@ stop_radius_factor: デフォルト0.5
 minutes_for_a_stop: 最小停止時間(デフォルト20分)
 
 spatial_radius_km: デフォルト0.2
+
+leaving_time: 停止場所からの出発時刻をデータに追加(デフォルトTrue)
