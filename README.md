@@ -54,3 +54,20 @@ opacity: 地図上に出力する線の透過度を指定
 
 tiles: 地図を選択を指定
 
+## TrajDataFrameのフィルタリング機能
+```
+from skmob.preprocessing import filtering
+filtered_tdf = filtering.filter(tdf, max_speed_kmh=5)
+```
+max_speed_kmh: 値km/h以上の速さの場合は除外する(デフォルトは500km/h)
+
+## TrajDataFrameの滞在検出
+```
+from skmob.preprocessing import detection
+stdf = detection.stay_locations(tdf, stop_radius_factor=0.5, minutes_for_a_stop=60, spatial_radius_km=0.2)
+```
+stop_radius_factor: デフォルト0.5
+
+minutes_for_a_stop: 最小停止時間(デフォルト20分)
+
+spatial_radius_km: デフォルト0.2
